@@ -1,6 +1,6 @@
 // Change your profile data here
 let profile = {
-  picture: "https://drive.google.com/thumbnail?id=1-5M8B4vtitATO7eJKiBPY3lLVw1IdSxL",
+  picture: "https://github.com/manesid/Sid-Portfolio/raw/master/img/me.jpg",
   name: "Siddheshwar Mane",
   description: "Java Developer & Software Engineer.",
   bio: "Java Developer with two years of IT experience in all phases of SDLC such as Planning,Analysis,Design,Implementation,Testing and Maintenance.",
