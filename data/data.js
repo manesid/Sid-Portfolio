@@ -41,7 +41,7 @@ let profile = {
     from: "July 2017",
     to: "July 2013"
   }],
-  quote: "I turn coffee into code"
+  quote: "One of my most productive days was throwing away 1000 lines of code."
 };
 
 let page = {
