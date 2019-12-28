@@ -12,6 +12,7 @@ function fillTemplate() {
   $("#profileImg").attr("alt", profile.name);
   // About
   $("#smallName").text(profile.name);
+  //Name
   $("#name")
     .find(".first")
     .text(profile.name.split(" ")[0]);
@@ -23,24 +24,32 @@ function fillTemplate() {
       .slice(1)
       .join(" ")
     );
+  //Add Location
   document.getElementById("location").innerHTML = profile.location;
+
+  //Add Birthdate
   document.getElementById(
     "age"
   ).innerHTML = `${birth.getFullYear()} / ${birth.getMonth() +
     1} / ${birth.getDate()}`;
+
+  //Add Email
   $("#email")
     .find(".email")
     .text(profile.email);
   document
     .getElementById("email")
     .setAttribute("href", "mailto:" + profile.email);
+
+    //Add description
   $("#description")
     .find(".quote")
     .text(`"${profile.quote}"`);
   $("#description")
     .find(".description")
     .text(profile.description);
-  // Social
+
+  // Social Links
   document
     .getElementById("linkedin")
     .setAttribute("href", profile.social.linkedin);
@@ -54,6 +63,7 @@ function fillTemplate() {
     .setAttribute("href", profile.social.stackoverflow);
 
   document.getElementById("bio-text").innerHTML = profile.bio;
+
   // Experience
   for (var i = 0; i < profile.experience.length; i++) {
     var experienceTemplate = $("#credsTemplate");
@@ -69,6 +79,8 @@ function fillTemplate() {
     if (i < profile.experience.length - 1)
       $("#experienceContainer").append(document.createElement("hr"));
   }
+
+  
   // Education
   for (var i = 0; i < profile.education.length; i++) {
     var educationTemplate = $("#credsTemplate");

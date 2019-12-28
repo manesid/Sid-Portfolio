@@ -2,8 +2,8 @@
 let profile = {
   picture: "https://github.com/manesid/Sid-Portfolio/raw/master/img/me.jpg",
   name: "Siddheshwar Mane",
-  description: "Java Developer & Software Engineer.",
-  bio: "Java Developer with two years of IT experience in all phases of SDLC such as Planning,Analysis,Design,Implementation,Testing and Maintenance.",
+  description: "Software Developer.",
+  bio: "Software Developer with two years of IT experience in all phases of SDLC such as Planning,Analysis,Design,Implementation,Testing and Maintenance.",
   email: "manesid3@gmail.com",
   location: "Pune, Maharashtra",
   birth: "1995-05-11", // YYYY-MM-DD format
@@ -15,7 +15,9 @@ let profile = {
     "Android",
     "Javascript",
     "SQL",
-    "H2"
+    "H2",
+    "NodeJS",
+    "Electron JS"
   ],
   social: {
     linkedin: "https://www.linkedin.com/in/guim-gonzalez-846606134/",
@@ -25,7 +27,7 @@ let profile = {
     dev: ""
   },
   experience: [{
-    title: "Java Developer",
+    title: "Software Developer",
     company: "TechMainstay Software Pvt. Ltd",
     url: "http://techmainstay.com/",
     location: "Nigdi, Pune",
