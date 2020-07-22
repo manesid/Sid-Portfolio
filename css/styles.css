@@ -1,6 +1,6 @@
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   padding-top: 54px;
   color: #2b2e3b;
 }
@@ -18,7 +18,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Staatliches", cursive;
+  /* font-family: "Staatliches", cursive; */
   font-weight: 700;
   text-transform: uppercase;
   color: #2b2e3b;
@@ -42,7 +42,7 @@ p.lead {
 }
 
 .subheading {
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
   font-size: 1.2rem;
 }
 
@@ -216,6 +216,10 @@ a:active {
   color: white;
   cursor: pointer;
   transition: all 0.3s;
+}
+
+#projectsContainer div.subheading{
+  align-items: flex-end;
 }
 
 /* Themes */

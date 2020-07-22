@@ -20,9 +20,9 @@ function fillTemplate() {
     .find(".second")
     .text(
       profile.name
-      .split(" ")
-      .slice(1)
-      .join(" ")
+        .split(" ")
+        .slice(1)
+        .join(" ")
     );
   //Add Location
   document.getElementById("location").innerHTML = profile.location;
@@ -31,7 +31,7 @@ function fillTemplate() {
   document.getElementById(
     "age"
   ).innerHTML = `${birth.getFullYear()} / ${birth.getMonth() +
-    1} / ${birth.getDate()}`;
+  1} / ${birth.getDate()}`;
 
   //Add Email
   $("#email")
@@ -41,7 +41,7 @@ function fillTemplate() {
     .getElementById("email")
     .setAttribute("href", "mailto:" + profile.email);
 
-    //Add description
+  //Add description
   $("#description")
     .find(".quote")
     .text(`"${profile.quote}"`);
@@ -80,7 +80,7 @@ function fillTemplate() {
       $("#experienceContainer").append(document.createElement("hr"));
   }
 
-  
+
   // Education
   for (var i = 0; i < profile.education.length; i++) {
     var educationTemplate = $("#credsTemplate");
@@ -102,6 +102,23 @@ function fillTemplate() {
     skillItem.innerHTML = profile.skills[skill];
     skillItem.classList.add("nightsky-skill");
     $("#skillsContainer").append(skillItem);
+  }
+
+  //Projects
+  if (profile.projects && profile.projects.length > 0) {
+    profile.projects.forEach(project => {
+      console.log(project);
+      let projTemplate = $("#credsTemplate2");
+      projTemplate.find(".mb-0").text(project.title);
+      // projTemplate.find(".mb-3").text(project.desc);
+      projTemplate.find("p").text(project.desc);
+      projTemplate.find("code.languages").text(project.langauages);
+      projTemplate.find("a").attr('href', project.url);
+      
+      $("#projectsContainer").append(projTemplate.html());
+      if (i < profile.projects.length - 1)
+        $("#projectsContainer").append(document.createElement("hr"));
+    });
   }
 }
 
@@ -168,8 +185,8 @@ function colorTheme() {
       target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
       if (target.length) {
         $("html, body").animate({
-            scrollTop: target.offset().top
-          },
+          scrollTop: target.offset().top
+        },
           1000,
           "easeInOutExpo"
         );
