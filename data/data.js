@@ -15,7 +15,7 @@ let profile = {
     "Electron JS",
     "React",
     "Redux",
-    "Sagas",
+    "Redux-Saga",
     "Express",
     "Spring Boot",
     "Javalin",
